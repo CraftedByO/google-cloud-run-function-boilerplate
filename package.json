@@ -1,0 +1,22 @@
+{
+  "name": "base-google-cloud-function",
+  "version": "1.0.0",
+  "description": "gcloud init\r npm init\r npm install @google-cloud/functions-framework",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "start": "functions-framework --target=TypescriptFunction",
+    "prestart": "npm run build",
+    "gcp-build": "npm run build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/functions-framework": "^3.1.3"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.5"
+  }
+}
