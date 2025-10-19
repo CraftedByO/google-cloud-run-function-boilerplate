@@ -35,7 +35,7 @@ npm install --save-dev typescript
 ### 3. Run Locally
 
 ```bash
-npm start
+npm run dev
 ```
 
 The function will be available at `http://localhost:3000`
