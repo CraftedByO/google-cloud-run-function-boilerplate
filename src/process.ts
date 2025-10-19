@@ -1,25 +1,14 @@
-const axios = require("axios");
+import { InputBody } from "./interfaces";
 
-export async function process_function(params: any) {
-  let result: Result = {
+export async function process(
+  input: InputBody
+): Promise<{ status: number; data: InputBody }> {
+  if (!input) {
+    throw new Error("Invalid input: missing data");
+  }
+
+  return {
     status: 200,
-    message: "",
+    data: input
   };
-
-  axios
-    .get(params.url)
-    .then(function (response: any) {
-      result = {
-        status: 200,
-        message: response.data,
-      };
-    })
-    .catch(function (error: any) {
-      result = {
-        status: error.code,
-        message: error.message,
-      };
-    })
-
-  return result;
 }
